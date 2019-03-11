@@ -3,9 +3,12 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './App.css';
 // 当入样式
 import 'semantic-ui-css/semantic.min.css'
-
+import AuthCheck from './auth'
 import Login from './login'
 import Main from './module/main'
+
+
+
 
 class App extends Component {
   render() {
@@ -13,7 +16,8 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Login}></Route>
-          <Route path="/home" component={Main}></Route>
+          {/* <Route path="/home" component={Main}></Route> */}
+          <AuthCheck path="/home" component={Main}></AuthCheck>
         </Switch>
       </BrowserRouter>
     );
