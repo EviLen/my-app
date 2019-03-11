@@ -16,12 +16,22 @@
   line-height: 70px;
   border-top: 1px solid seagreen;
 }
-.main-container .main-menu .menu-icon {
-  height: 30px;
+.placeholder {
+  color: #bbb;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  z-index: 9999;
 }
-.main-container .main-menu .menu-name {
-  height: 30px;
-  line-height: 50px;
+.placeholder i {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+}
+.placeholder div {
+  height: 15px;
+  line-height: 10px;
 }
 .main-container .main-content {
   position: absolute;
@@ -29,4 +39,7 @@
   bottom: 70px;
   width: 100%;
   /* background-color: orange; */
+}
+.active {
+  color: orange;
 }

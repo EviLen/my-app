@@ -6,7 +6,8 @@ import 'semantic-ui-css/semantic.min.css'
 import AuthCheck from './auth'
 import Login from './login'
 import Main from './module/main'
-
+// 导入外界图标字体
+import './assets/fonts/iconfont.css'
 
 
 
