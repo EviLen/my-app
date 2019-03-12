@@ -1,13 +1,13 @@
 import React from 'react'
-import { Input, Grid, Icon, Item, Button, Dimmer } from 'semantic-ui-react'
-import './index.css'
+import { Input, Grid, Icon, Item, Button, Dimmer, Loader } from 'semantic-ui-react'
 // 导入轮播图插件
 import ImageGallery from 'react-image-gallery'
 // 样式
+import './index.css';
 import 'react-image-gallery/styles/css/image-gallery.css'
 import axios from 'axios'
 import { baseURL } from '../../common'
-import { promised } from 'q';
+
 
 // 菜单组件
 function Menu(props) {
@@ -174,7 +174,7 @@ class Home extends React.Component {
   loadData = (pathName, dataName) => {
     // 这里的return是loadData的返回值，实际上就是promise实例对象
     return axios.post(pathName).then(res => {
-      // console.log(res)
+      console.log(res)
       // 对象属性名称可以是动态的（可以是变量es6语法）
       return res.data.list
     })
@@ -214,7 +214,7 @@ class Home extends React.Component {
         info:ret[2],
         faq:ret[3],
         house:ret[4],
-      },()=>{
+      },()=>{ 
         // 所有的数据已经返回，隐藏遮罩效果
         this.setState({
           loadFlag: false
